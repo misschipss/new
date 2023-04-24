@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Beauty Salon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link href="main_page.css" rel="stylesheet" type="text/css">
+    
+    
+</head>
+<body>
+   <header>
+        <nav class="navbar-fluid">
+            <div class="logo_name">
+              <a href="main_page.html">
+                <img src="pngtree-salon-logo-png-image_4024992.png-removebg-preview.png" 
+                width="100px" height="100px">
+                </a> 
+                <div id="name">
+                <h1>Beauty Salon <i> Lotus </i></h1>
+                </div>
+            </div>
+            <div class="navbar-collapse justify-content-between">
+                <div class="upper_text">
+                    <a href="about.html" >ABOUT US</a>
+                   <a href="service.html" >CATALOG OF SERVICES</a>
+                   <a href="masters.html" >LIST OF MASTERS</a>
+                    <a href="application.html" >APPLICATION FORM</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="https://img.freepik.com/premium-psd/top-view-beauty-salon-concept_23-2148600664.jpg?w=2000" style="width: 100%">
+                  
+              </div>
+                  <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://grandhotelmillenniumsofia.bg/wp-content/uploads/2021/09/beauty-salon-interior-5-scaled.jpg"
+                     style="width:100%">
+                    <div class="text"><h2>Comfortable interior</h2></div>
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://media.smallbiztrends.com/2022/10/hair-salon-franchise.png" style="width:100%">
+                    <div class="text"><h2>Professional Masters</h2></div>
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+                  
+                  <script>
+                  let slideIndex = 0;
+                  showSlides(slideIndex);
+                  
+                  function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                  }
+                  
+                  function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                  }
+                  
+                  function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                   
+                  }
+                  </script>
+                  <script>
+                      let slideInde = 0;
+                      showSlides();
+                      
+                      function showSlides() {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) {slideIndex = 1}    
+                        for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex-1].style.display = "block";  
+                        dots[slideIndex-1].className += " active";
+                        setTimeout(showSlides, 5000);
+                      }
+                      </script>
+                    <footer>
+                        <p>123 Street, Astana, Kazakhstan</p>
+                        <p>+7777 777 77 77</p>
+                        <p> <a href="mailto:@example.com">@example.com</a></p>
+                      </footer>
+                
+</body>
